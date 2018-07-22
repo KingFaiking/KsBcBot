@@ -24,19 +24,6 @@ client.on('message',async message => {
       .then(collected => {
         collected.first().delete();
         thisMessage = collected.first().content;
-        msg.edit(':regional_indicator_b::regional_indicator_c:| **هل انت متأكد؟**');
-        let awaitY = message.channel.awaitMessages(response => response.content === 'نعم' || 'لا' && filter,{
-          max: 1,
-          time: 20000,
-          errors: ['time']
-        })
-        .then(collected => {
-          if(collected.first().content === 'لا') {
-            msg.delete();
-            message.delete();
-            thisFalse = false;
-          }
-          if(collected.first().content === 'نعم') {
             if(thisFalse === false) return;
           message.guild.members.forEach(member => {
             msg.edit(':regional_indicator_b::regional_indicator_c:| **جاري الارسال**');
