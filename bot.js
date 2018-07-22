@@ -14,9 +14,6 @@ client.on('message', message => {
     if(message.content.startsWith('$bc')) {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للإدارة**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية لاستعمال هاذا الأمر** //By Codes , ' ّEpicEdiTeDّ#4968`ADMINISTRATOR`' );
-    let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "S Bot";
-    let request = `Requested By ${message.author.username}`;
     if (!args) return message.reply('**يجب عليك كتابة شيئ لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من الإرسال؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {//By Codes , ' ّEpicEdiTeDّ#4968
     msg.react('✅')
     .then(() => msg.react('❌'))
