@@ -47,8 +47,8 @@ msg.delete();
 NormalBc.on("collect", r => {
   message.channel.send(`:ballot_box_with_check: تم ارسال الرساله بنجاح`).then(m => m.delete(5000));
 message.guild.members.forEach(m => {
-m.send(':thinking:  المرسل : ${message.author.username}')
-m.send('الرسالة : ${args}')
+m.send(":thinking:  المرسل : `${message.author.username}`")
+m.send("الرسالة : `${args}`")
 msg.delete();
 })
 })
