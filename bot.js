@@ -47,13 +47,14 @@ msg.delete();
 NormalBc.on("collect", r => {
   message.channel.send(`:ballot_box_with_check: تم ارسال الرساله بنجاح`).then(m => m.delete(5000));
 message.guild.members.forEach(m => {
-m.send(args);
+m.send(`${argresult}\n ${m}`);
 msg.delete();
 })
 })
 })
 }
 });
+
 
   client.on('ready', function(){
     var ms = 1000 ;
